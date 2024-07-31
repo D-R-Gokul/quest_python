@@ -1,1 +1,317 @@
+QUEST GLOBAL PYTHON TRAINING
+
+Day1 Tuesday 30-07-2024
+
+S/W Installation:
+1. notepad++
+G serach: download notepad++
+https://notepad-plus-plus.org/downloads/
+version: 8.6.7
+
+2. vs code
+G search: download VS Code
+https://code.visualstudio.com/download
+Select the OS and download the installer file (.msi file)
+
+3. python
+G search: download python
+https://www.python.org/downloads/
+Select the OS and download the installer file (.msi file)
+version 3.12.4
+
+Create a folder named "software" in C drive
+Now create the folders "python", "notepad_pp", "vs_code" inside the software folder.
+
+Now, cut and paste the installer files from "downloads" folder into the respective folders in side C:\software 
+
+After the installer files are stored in their respective folders, then double click and install them. 
+---------------------------------------------
+Go to D drive (or C drive), nothing but where your learning content is present,
+create a new folder named "python_learning"
+
+Python is installed here:
+C:\Users\ASUS\AppData\Local\Programs\Python\Python311>
+---------------------------------------------------------
+PROBLEM SOLVING STEPS:
+
+1. UNDERSTAND THE PROBLEM. Write the down the required data and information. Isolate and remove the unwanted data and information.
+Also assertain/decide/infer the O/P of the problem.
+OUTCOME: The hidden Direct Question in the given problem statement we get. (The given problem may be story kind or real life scenario)
+
+2. FIND THE SOLUTION using mathematically or trial and error or using any specific formula or known technique.
+OUTCOME: You have a clear idea of the solution for the given problem (which we may be implementable)
+
+3. WRITE THE ALOGRITHM: An algorithm is a step by step procedure to solve an ATOMIC problem.
+Each step of the algorithm, must be atomic, descriptive and finite.
+OUTCOME: You have all the instructions/steps/statements of the solution.
+
+4. PSEUDOCODE: Write the FakeCode:
+Advantage of writing the pseudocode is that, it looks like a code written in some language.
+OUTCOME: You have a solution which you can test (Test it using flow chart or some testing tool or de-bugger, Testing means, Tracing the logic)
+
+5. CODE THE SOLUTION: using the language syntax (Python or Java or C++ or C or C# or R)
+OUTCOME: The basic App/Program is ready
+
+6. STATISFY THE CONSTRAINTS: Read the constraints and go back to the code and add the required conditions that check the data to be in required range.
+
+7. OPTIMIZE THE SOLUTION: The code efficiency, readabality and maintainability must be good. Hence, Allign the code to follow the development standards.
+------------------------
+1. Check if a character is a digit.
+
+Every character in every language belongs to a specific character set.
+The older but widely used character set is ASCII which has 256 characters and every character is of one byte in size.
+256 characters were insufficient. Hence UNICODE character set was introduced which is used by languages like Java, Python, Modern C++, C# etc. However, the 1st 256 Unicode characters are the ASCII characters. All the characters have respective(unique) values.
+The unicode/ascii values of the digits which are stored as characters in memory have their values starting from 48 to 57. That is the character '0' has value 48, '1' has 49 and '2' has 50 and so on upto '9' with value 57.
+
+CH = '2' here 2 is stored in CH as a character
+NUM = 2  here 2 is stored in NUM as a number
+
+Algorithm:
+1. Read a character say CH
+2. check if CH >= 48 and CH <= 57
+Alternatively, we can also check: CH >= '0' and CH <= '9'
+if yes: Print 'given character is a digit'
+else: 	Print 'given character is not a digit'
+
+NOTE:
+We cannot use strings as integers in Python. If we try to do so, we get "TypeError" which is runtime error.
+
+ValueError: If we try to convert a data into another type which is not possible. Example, trying to convert 'abc' into int()
+
+Python Solution:
+print('Enter a character to chekc if it is a digit')
+ch = input()
+if ch >= '0' and ch <= '9':
+    print('given character is a digit')
+else:
+    print('given character is Not a digit')
+------------------------------------------------------
+2. Check if a number is Perfect square
+
+45		6.76	6		36
+121		11.0	11		121
+Algorithm:
+Read the input number N
+Find Root of N and store it a variable ROOT
+Now find the Floor of ROOT and store it in INT_ROOT
+Now check if INT_ROOT * INT_ROOT is equal to N
+If yes: print N is P S
+else  : print N is not a P S
+
+floor() It removes/truncates the decimal part if any.
+
+round() If the decimal part is 0.5 or more then next integer number is returned, else the decimal part is truncated.
+
+ciel() Returns the next integer number if the decimal part of the number is anything other than .0
+So ciel(7.000001) is 8.
+
+NOTE: All the above 3 functions return an integer.
+--------------------------------------------------------------
+Assignment Question:
+What is open interval and closed interval
+
+What is Data ?
+Data is some information which has an implicit meaning and it is worth storing. 
+
+Give a name to the below set:
+{sky, needle, fever, transistor, webcam, biology, grass, point, her, mammle}
+
+Give a name to the below set:
+{Tiruvanantapuram, Chennai, Bengaluru, Amaravati, Panjim}
+
+places/locations
+cities
+data
+capital cities
+capital cities of southern states of India
+
+Types of data?
+How we can classify the data ?
+
+w.r.t. Data Types:
+numeric
+boolean
+string
+multimedia data (images, video, audio, gif etc)
+
+w.r.t. nature of the data:
+qlalitative and quantitative data
+
+Numeric:
+	number (int, long, short, byte, tinyint, smallint, bigint)
+	number with precision (float and double)
+string
+	alphabetic (name of a place or person)
+	alphanumeric (number of a vehicle, USN of a student etc)
+	
+In Pallakkad NSS college:
+The college every year filicitates a topper and only one and always.
+
+Assume, 4 students got the top score 97. Now the college is in confusion what to do! Because there is no single topper.
+So they sent to re-correction and gave these instructions to the evaluator:
+1. If you find any grammer mistake (missing punctuations) or scratches done or not a good explanation, etc then you can remove 0.5 marks.
+2. If you find the answer is very good and good readabality etc, then give extra 0.5 marks.
+3. Any addition or deduction of marks can be done only 2 times.
+
+Thus after re-correction,
+s1 got bonus 0.5 and now the score is 97.5
+s2 got 2 times deduction and hence 1 mark reduced and score is 96
+s3 got 1 time deduction and new score is 96.5
+s4 remained with 97 because there was no changes.
+
+So, now the college NSS can declare the topper.
+What helped the college to do so?
+It is the decimal part of the number. And hence the decimal part of a number is not part of the, rather it is mentions the accuracy/precision of the number.
+------------------------------------------
+ARITHMETIC OPERATORS:
++  -  *  /  % 
+Additions in Python:  // **
+
+All the arithmetic operators are binary operators.
+The operator is always placed in between the operands, i.e. we must use the INFIX NOTATION syntax only.
+oprnd1 oprnd2 * (postfix notation)
++ oprnd1 prnd2  (prefix notation)
+oprnd1 - oprnd2 (Infix notation)
+The + and - operators have LESSER PRECEDENCE than * / and %
+This rule is called as BRODMAS RULE.
+Associtivity: The Arithmetic expression is always solved Left to Right.
+Arithmetic operators have Left to Right associtivity.
+x + y % z
+The modulo operation must happen 1st. Then the remainder number is added to x.
+However, the expression is read from left, that is we read 'x' first.
+Hence, all Arithmetic expressions are solved only after converting the Programmer/user written Infix expression into postfix and then the expression io solved.
+The i/p are numbers and The o/p is a number
+NOTE: The way integers are stored and the way floating point numbers are stored are different.
+
++ve integers are stored only by impleting the algorithm to convert decimal/octal/hexa-decimal numbers into binary.
+
+-ve numbers: The 2s compliment of the number is stored in memory.
+
+float/double: IEEE standard formula is used to store the number.
+
+And hence, when an Arithmetic operation happens, the Data Type of both the operands must be same. If not, one of the 2 operands is implicitly type casted.
+
+TYPE CASTING:
+Conversion of the DT of a value (usually a number) to another.
+Explicit Casting: When the programmer adds the code(syntax) for the cast to happen:
+var = '10.5'
+num = float(var) 
+Above is an example of Casting. Where we are converting a string into an integer number.
+var = 10.5
+num = int(var)
+Here we are explicitly casting float data into int data.
+Note that the decimal part (precision) is lost. Hence it is called as DOWN CAST.
+When ever we cast a lower sized data type value into a higher sized data type value, then it is called as UP CAST.
+
+var = 10.5
+num = var // This is implicit down cast
+
+w.r.t. C/C++/Java
+int num1 = 25;
+double d = num; // This is implicit up cast
+int num2 = int(d); // This explicit down cast
+
+NOTE: In Python, there is no IMPLICIT CAST.
+num = input()
+Expecting to read a number data in the above statement will result in error, because input() always returns a string.
+
+NOTE: In all languages, the read and write functions like printf() scanf() gets() puts() input() prompt() cin and cout, readline() etc etc. all Accept/get string from the OS and what they have to send to the o/p device to via the OS is also string data only.
+------------------------------------
+RELATIONAL OPERATORS:
+< > == != >= <=
+All the operators are binary operators
+The i/p are numbers and o/p is boolean
+infix notation is used
+Relational operators have Lesser precedence than Arithmetic operators.
+Associtivity: Left to Right
+
+What ever we right using <= or >= can also be written using < and > respectively.
+For example:
+for(int i = 1; i <= 20; i++)
+can be written as:
+for(int i = 1; i < 21; i++)
+So, the operands >= and <= look redundant. But they are not. Why ?
+
+In Math, we have concept:
+(10, 30) Open interval, where the end values are excluded:
+So the range is: 11 to 29
+if(value > 10 and value < 30)
+[20, 50] Closed Interval, where the end values are included:
+So the range is: 20 to 50
+if(value >= 10 and value <= 30)
+(25, 75] Left Open, where the left end value is excluded.
+So the range is: 26 to 75
+if(value > 25 and value <= 75)
+
+Hence they are not redundant because, programming is a sub set of Math, and it must implement every rule of Mathematics.
+---------------------------
+Logical Operators:
+w.r.t. C/C++/Java/C#
+& && | || !
+w.r.t. Python:
+and or not
+i/p are boolean and o/p is boolean
+We write: true and true
+
+Python Language Characteristics:
+-> Python is an Interpreted language and not a compiled language.
+-> The code is taken by the interpretor, and each instruction is
+Compiled -> Interpreted -> Run
+-> In Python the DT of a variable is set dynamically and hence we need not mention the DT of a variable, rather start using it.
+-> In Python everything is an Object including the functions.
+-> Thus we can add properties to the object which are useful during development.
+-> Python syntax is very easy to use and the language is developed such that the code is very compact and highly abstract.
+-> The trade-off with Python is that, it is slower compared with Java during the runtime and very slow compared with C/C++ runtime.
+-> Python is very suitable for building Apps that are developed on RAD sdlc.
+-> Since it is easier and faster to develop in Python, lot of Modules are built for various domains and programming dimensions like Web App development (Django and Flask), for data analytics(science), we have numpy, pandas and for data visualization we have matplotlib etc. (List is very long)
+-> Python give us buint in data structures like:
+list: mutable and ordered (can be indexed)
+set: immutable and unordered (cannot be indexed)
+tuple: immutable and ordered
+dictionary: key-value pairs (mutable and ordered)
+Along with the above, string type is implemented and all these have good amount of methods to perform various operations.
+-> Python allows us to use the Ordered DS with negetive indexing.
+-> We can create a list of lists or lists with elements that are of different types such as set, dictionary, string etc.
+-> We have the list comprehension, map method and lambda expressions and also regex which allows us to develop code for complex problems.
+-> Pethora of modules like sys, math, pickle and so many of them that helps us to develop code very fast.
+-------------------------
+UNIQUE PYTHON FEATURES:
+-> There is no function overloading in Python
+-> Python allows us to develop code in OOP. But it is implicitly not a strict OOPL like Java.
+-> We should know the difference between @static method and @class method
+-> We must know as many methods that start with double underscore and ends with double underscore
+__new__()
+__init__()
+__add__()
+-----------------------------------------
+num2 = 235
+print('Num2 = ' + str(num2) + ' is smallest') # Here we are explicitly appending/concatinating a string to another.
+
+print('Num2 = ', num2, ' is smallest') # Here, the num2 will be implicitly converted to string and the appending/concatination happens implicitly.
+
+# In the above code snippet, the str(num2) is to CAST the 'int' data into 'str' data. Note that in Python, there is no Implicit Type Conversion.
+--------------------------
+Program3: small_of_two_nums.py
+
+num1 = 7 # 7 here is an int literal (constant/fixed value)
+num2 = 5
+
+if num1 < num2:
+    print('Num1 = ', num1, ' is smallest')
+else:
+    print('Num2 = ' + str(num2) + ' is smallest')
+-------------------------------------------------------------
+ASSIGNMENTS:
+Day1:
+1. List the unique characteristics/features of Python
+2. Write a program to check if a number is Even.
+3. Write a program to convert a lower case letter to upper case.
+4. Check if a letter is vowel or consonant
+5. Check if a number is single digit or not.
+
+Day2:
+2. The alternative implementation of function overloading in Python
+3. Why there is no implicit type casting in Python ?
+4. Why there is no ++ and -- (increment/decrement) operators in Python ?
+5. 
 
