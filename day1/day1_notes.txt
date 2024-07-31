@@ -315,3 +315,25 @@ Day2:
 4. Why there is no ++ and -- (increment/decrement) operators in Python ?
 5. 
 
+
+1. Create git hub account. Verify with the OTP sent to your email.
+2. Generate PAT.
+	my_icon -> seetings -> developer settings -> create personal access token -> classic -> select Repo and 2 other options
+3. Copy and save the PAT in a file and save the file in C:\software folder.
+4. Now download and install git.
+5. Now, go into your working folder and open the command prompt.
+6. Go to your repository that you just created, and copy the URL.
+Example: https://www.gihub.com/nithin/quest_python
+6. Run the command:
+	$> git close https://www.PAT@gihub.com/nithin_n/quest_python
+	PAT here is the personal access token
+7. Now run the commands:
+	git config --global user.name "nithin_n"
+	git config --global user.email "mtd.nithin@gmail.com"
+8. Now, open the VS code from the working folder.
+	You can see a folder with your repo name
+9. When ever we do any changes to the repo (adding or deleteing or modyfying 
+files and folder), we must click on the version_control icon in VS code (Left most 
+corner 3rd vertical icon). Now, in the message box, add the relevant message (day2 
+notes and programs are added) and click on COMMIT button. Next, click on the SYNC
+ button and then click OK when you are prompted.
