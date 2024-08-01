@@ -2,7 +2,7 @@
 
 input_number= int(input("Enter a number to check if it is prime number or not:  "))
 count =0
-if(input_number <=2):
+if(input_number <=1):
     print('The entered number is neither prime nor composite')
 else:
     for i in range(1,input_number+1):
