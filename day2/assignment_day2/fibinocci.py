@@ -3,8 +3,8 @@ number_of_lines = int(input("Enter the number of terms of fibinocci series:  "))
 first =1
 second=2
 for i in range(number_of_lines):
-    print(a)
-    next_term=a+b
+    print(first)
+    next_term= first + second
     first = second
     second = next_term
     
