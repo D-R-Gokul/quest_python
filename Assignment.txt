@@ -1,0 +1,175 @@
+1.What is the alternative implementation of function overloading in Python?
+    When two functions with the same name are created in Python, the latest one declared is utilized. 
+    These definitions supersede the previous ones. 
+    Methods to Achieve Python Function Overloading;
+    Using Default Parameter Values:
+    One of the simplest ways to achieve Python function overloading is by using default parameter values. 
+    This approach allows us to define a function with optional parameters, providing default values if those parameters 
+    are not supplied. This way, we can handle multiple scenarios with a single function.
+
+    Utilising Variable-Length Arguments (*args and **kwargs)
+    The *args and **kwargs constructs allow us to accept an arbitrary number of positional and keyword arguments, respectively.
+     This flexibility lets us handle different combinations of arguments in a single function.
+
+    Implementing Function Overloading with Type-Checking
+    Type-checking within a function is another effective method to simulate function overloading.
+    By checking the types of the arguments, we can execute different code blocks based on the argument types and numbers.
+
+    Employing the Multiple Dispatch Library
+    For those who need more structured function overloading, the multipledispatch library is a great option. This library 
+    allows us to define multiple implementations of a function and dispatches calls to the appropriate one based on the runtime 
+    types of the argument
+
+
+2. Why there is no implicit type casting in Python ?
+
+Python avoids implicit type casting to maintain clarity and prevent unintended behavior. Here are a few reasons why Python takes this approach:
+
+Explicit is better than implicit: This is one of the guiding principles of Python as stated in the Zen of Python (PEP 20). 
+Making conversions explicit helps in understanding the code better and reduces unexpected bugs.
+
+Error Prevention: Implicit type casting can lead to subtle bugs that are hard to track. For instance, combining different data
+ types without explicit conversion might produce unexpected results, which can be problematic in large and complex code bases.
+
+Readability: Python emphasizes code readability. When type conversions are explicit, it is clear to anyone reading the code
+ what types of operations are being performed and why.
+
+Flexibility: By requiring explicit type conversions, Python gives developers more control over how and when types are converted. 
+ can be especially important when dealing with complex data structures or performing precise numerical calculations.
+
+3. Why there is no ++ and -- (increment/decrement) operators in Python?
+Simplicity and Clarity: Python emphasizes code readability and simplicity. Using ++ and -- can lead to less readable code, 
+especially for those new to programming or to the language. Python prefers more explicit and clear ways to increment or 
+decrement values.
+
+Immutable Integers: In Python, integers are immutable, meaning that once an integer object is created, its value cannot be 
+changed. Operations like ++ and -- typically modify the value of a variable in place, which doesn't align well with Python's
+ handling of integers. Instead, you create a new integer object with the incremented or decremented value.
+
+Explicit Increment/Decrement: Python encourages the use of explicit operations for clarity. Incrementing or decrementing values 
+can be done using += or -= operators, which clearly show that a value is being changed:
+
+Avoiding Common Bugs: The ++ and -- operators can lead to subtle bugs, especially when used in complex expressions or mixed with 
+other operations. By not including these operators, Python reduces the likelihood of such bugs and encourages more straightforward 
+and predictable code.
+
+4.What is the difference between @static method and @class method?
+
+@staticmethod
+No Access to Class or Instance: A static method does not receive any reference to the instance (self) or the class (cls). 
+It behaves like a regular function but belongs to the class's namespace.
+
+Usage: Static methods are used when the method's logic neither accesses nor modifies the class state or instance state. 
+They can be called on the class itself or on an instance of the class.
+
+Definition: Use the @staticmethod decorator to define a static method.
+
+@classmethod
+Access to Class: A class method receives a reference to the class (cls) as the first argument. This allows the method 
+to access and modify class state.
+
+Usage: Class methods are used when you need to access or modify the class state that applies to all instances of the class. 
+They can be called on the class itself or on an instance of the class.
+
+Definition: Use the @classmethod decorator to define a class method.
+
+5.What is the difference between __new__() and __init__() ?
+
+__new__()
+Purpose:
+
+__new__() is responsible for creating a new instance of a class. It is the first step in the object instantiation process.
+It is a static method that takes the class itself (cls) as its first argument.
+Usage:
+
+__new__() is rarely overridden unless you're dealing with immutable types (like tuples, strings, and numbers) or implementing
+ custom metaclasses.
+It can be used to control the creation of new instances, such as implementing singleton patterns or caching instances.
+Return Value:
+
+__new__() must return a new instance of the class. If it doesn't return an instance of the class, __init__() will not be called.
+
+
+__init__()
+Purpose:
+
+__init__() is responsible for initializing the instance after it has been created. It is the second step in the object 
+instantiation process.It is an instance method that takes the newly created instance (self) as its first argument.
+Usage:
+
+__init__() is commonly overridden to set up the initial state of the instance (i.e., initializing instance variables).
+Return Value:
+
+__init__() does not return anything (it returns None).
+
+6. What is the syntax to use switch-case in Python. Given an example.
+
+ Python does not have a built-in switch-case statement like some other languages (e.g., C, C++). However, you can 
+ achieve similar functionality using dictionaries or the match-case statement introduced in Python 3.10.
+
+ def case1():
+    return "This is case 1"
+
+def case2():
+    return "This is case 2"
+
+def case3():
+    return "This is case 3"
+
+def default_case():
+    return "This is the default case"
+
+switch = {
+    1: case1,
+    2: case2,
+    3: case3
+}
+
+def switch_case(case_number):
+    return switch.get(case_number, default_case)()
+
+# Example usage
+case_number = 2
+print(switch_case(case_number))  # Output: This is case 2
+
+
+in 3.10
+
+def switch_case(case_number):
+    match case_number:
+        case 1:
+            return "This is case 1"
+        case 2:
+            return "This is case 2"
+        case 3:
+            return "This is case 3"
+        case _:
+            return "This is the default case"
+
+# Example usage
+case_number = 2
+print(switch_case(case_number))  # Output: This is case 2
+
+
+7. Can the key within a dictionary be a composite value like a list or tuple, or should it be an atomic value such as number or string?
+
+In Python, dictionary keys must be hashable and immutable. This means that the key must be of a type that can be used as a unique
+ identifier for dictionary entries, and it must not change over its lifetime. Here’s a breakdown of what this entails:
+
+Immutable and Hashable Types
+Immutable Types: Immutable types cannot be modified after they are created. Common examples of immutable types include:
+
+Numbers: Integers, floats, etc.
+Strings: Textual data.
+Tuples: Tuples are immutable sequences. If a tuple contains only other immutable objects, it can be used as a dictionary key.
+Frozensets: Immutable sets.
+Hashable: A hashable object has a fixed hash value that does not change during its lifetime. This is necessary for ensuring that 
+dictionary operations like lookups and insertions work correctly.
+
+Mutable Types and Composite Values
+Lists: Lists are mutable (they can be changed after creation), so they cannot be used as dictionary keys. This is because 
+their hash value would change if the list were modified, which would break the integrity of the dictionary.
+
+Dictionaries: Dictionaries themselves are mutable, so they cannot be used as keys for other dictionaries.
+
+Sets: While sets are mutable and thus cannot be used as dictionary keys, frozensets are immutable and can be used as keys.
