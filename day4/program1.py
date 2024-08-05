@@ -1,6 +1,8 @@
 #Find Nth term of series : 1 2 2 3 3 5  5 7 8 11 13 13
-import math
 
+import pdb
+import math
+pdb.set_trace()
 def nth_fibo_term( number):  #function to get N//2 +1 th fibo term
     n= number//2 + 1
     third_number = 0
@@ -55,5 +57,6 @@ if( input_number % 2 != 0):
 else:
     nth_term = nth_prime_term(input_number)
     print(f'{input_number}th term of this series is: {nth_term}')
-    
-    
+
+
+

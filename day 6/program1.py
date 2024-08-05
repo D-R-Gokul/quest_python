@@ -1,4 +1,7 @@
 #Accept a string of Pairs of Peranthesis and check if they are arranged properly. If so, print the number of pairs of peranthesis else print improper arrangement.
+import pdb
+
+pdb.set_trace()
 def check_proper (paranthesis):
     count1 = 0
     count2 = 0
