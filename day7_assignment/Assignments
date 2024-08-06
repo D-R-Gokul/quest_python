@@ -1,0 +1,10 @@
+2. What does the file attribute in print function specify?
+
+The file function in print function definition specifies where to print the output. By default the file 
+is set to the console. Hence the print function prints the output to the terminal.
+
+
+3. How to round off to the closest value.
+  round() - rounds the number to next integer if decimal value is above 0.5 else rounds to previous integer.
+  ceil() - returns next integer value if decimal value is anything greater that 0.0
+  floor() - returns the previous integer value
