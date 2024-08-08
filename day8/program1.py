@@ -28,25 +28,29 @@
 # Accounts (BCOM): Maths>95, pass in all subject (English and Arts > 35)
 
 # Sales (MECH): Maths>90 + Literature>90, pass in all subject (Art > 35)
+
+
 class InputCountError(Exception):
     def __init__(self, message):
         self.message = message
-        
 
 
 branch_dictionary = {1: "ECE", 2: "MECH", 3:"BCOM"}
 preferance_dictionary = {1:"Maths", 2: "English", 3: "Arts"}
-name =  input("Please enter your name: ")
-branch_key = int(input("Enter the corresponding number: 1: ECE \n2: MECH \n3:BCOM"  ))
-preferance_key = list(map(int,input("Choose from the choices \n1: Maths \n2: English \n3:: Arts").split()))
-marks = list(map(int,input("Enter the marks of maths english and arts seprated by ' ' ").split()))
 
 
 try: 
+    name =  input("Please enter your name: ")
+    branch_key = int(input("Enter the corresponding number: 1: ECE \n2: MECH \n3:BCOM \n"  ))
+
     if branch_key not in range(1,4):
         raise InputCountError("Choose one from the options given ")
+
+    preferance_key = list(map(int,input("Choose from the choices \n1: Maths \n2: English \n3:: Arts \n").split()))
     if(len(preferance_key) <1 or len(preferance_key) > 3):
         raise InputCountError("Choose at least 1 not more than 3")
+
+    marks = list(map(int,input("Enter the marks of maths english and arts separated by ' ' \n").split()))
     if(len(marks)==3):
         maths = marks[0]
         english = marks[1]
@@ -55,6 +59,9 @@ try:
         raise InputCountError("Enter exactly three scores")
 except InputCountError as e:
     print(e)
+except :
+    print("Something went wrong. Try again")
+
 preferance = set()
 branch = branch_dictionary.get(branch_key)
 for i in preferance_key:
@@ -71,6 +78,7 @@ if branch == 'ECE':
             print("Your marks do not qualify")
     else:
         print("Your preferance do not align with the requirements")
+
 elif branch == 'BCOM':
     if accounts.issubset(preferance):
         if maths > 90 and arts >35 and english >35:
@@ -79,6 +87,7 @@ elif branch == 'BCOM':
             print("Your marks do not qualify")
     else:
         print("Your preferance do not align with the requirements")
+
 else:
     if sales.issubset(preferance):
         if maths > 90 and arts >35 and english >90:
