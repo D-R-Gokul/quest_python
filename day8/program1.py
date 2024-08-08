@@ -81,7 +81,7 @@ if branch == 'ECE':
 
 elif branch == 'BCOM':
     if accounts.issubset(preferance):
-        if maths > 90 and arts >35 and english >35:
+        if maths > 95 and arts >35 and english >35:
             print("You are selected for Accounting")
         else:
             print("Your marks do not qualify")
