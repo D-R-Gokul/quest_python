@@ -3,6 +3,7 @@ class Person:
     def __init__(self, age, gender, residance):
         self.age = age
         self.gender = gender
+        
         self.residance = residance
         
     def senior(self):
