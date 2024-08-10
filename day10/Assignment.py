@@ -42,26 +42,26 @@ try:
     if residance_key not in range(1, 3):
         raise ValueError
 
-
-    if(age > 60 and gender_dict.get(gender_key) == 'm') or (age >45 and gender_dict.get(gender_key) == 'f'):
-        person1 = Person(age, gender_dict.get(gender_key),residance_dict.get(residance_key))
-        person1.senior()
-        sys.exit("Thankyou, Come Again")
-        
-
-    if occupation_key ==1:
-        colgpin = int(input("Enter college pin: "))
-        stud = Student(age, gender_dict.get(gender_key),residance_dict.get(residance_key),colgpin)
-        stud.is_hosteler()
-        stud.gender_discount()
-        sys.exit("Thankyou, Come Again")
-
-    if occupation_key ==2:
-        pin = int(input("Enter the pin of office: "))
-        employee = Working(age, gender_dict.get(gender_key),residance_dict.get(residance_key),pin)
-        employee.is_hosteler()
-        employee.gender_discount()
-        sys.exit("Thankyou, Come Again")
-        
 except:
     print("Please enter valid choice, Try again")
+
+if(age >= 60 and gender_dict.get(gender_key) == 'm') or (age >=45 and gender_dict.get(gender_key) == 'f'):
+    person1 = Person(age, gender_dict.get(gender_key),residance_dict.get(residance_key))
+    person1.senior()
+    sys.exit("Thankyou, Come Again")
+
+
+if occupation_key ==1:
+    colgpin = int(input("Enter college pin: "))
+    stud = Student(age, gender_dict.get(gender_key),residance_dict.get(residance_key),colgpin)
+    stud.is_hosteler()
+    stud.gender_discount()
+    sys.exit("Thankyou, Come Again")
+
+if occupation_key ==2:
+    pin = int(input("Enter the pin of office: "))
+    employee = Working(age, gender_dict.get(gender_key),residance_dict.get(residance_key),pin)
+    employee.is_hosteler()
+    employee.gender_discount()
+    sys.exit("Thankyou, Come Again")
+
