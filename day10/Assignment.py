@@ -4,15 +4,18 @@ class Person:
         self.age = age
         self.gender = gender
         self.residance = residance
+        
     def senior(self):
         print("Senior citizen discount of 15 percent applied")
+
     def is_hosteler(self):
         if (self.residance == 'h'):
             print("Discount on groceries")
+
     def gender_discount(self):
         if(self.gender == 'm'):
             print("You won a Fastrack coupon worth 100")
-        else:
+        if(self.gender == 'l'):
             print("You won a Nyka coupon worth 100")
 
 
