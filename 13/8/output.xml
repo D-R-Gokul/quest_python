@@ -1,160 +1,1718 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T08:55:47.303327" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-20T00:06:09.457083" rpa="false" schemaversion="5">
 <suite id="s1" name="Training2" source="D:\python_learning\quest_python\13\8\training2.robot">
-<test id="s1-t1" name="TC-002 Verify if a user is search busess for tommorow" line="12">
-<kw name="Open Make My Trip As">
+<kw name="Open Make My Trip As" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:09.797765" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.637346" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:09.797765" elapsed="2.177623"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.637346" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:11.975388" elapsed="0.061481"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:12.036869" level="INFO">Opening url 'https://www.makemytrip.com'</msg>
 <arg>https://www.makemytrip.com</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.637346" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:12.036869" elapsed="6.140239"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:06:23.177691" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.637346" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:18.177108" elapsed="5.000583"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:23.177691" level="INFO">Clicking element '//span[@data-cy="closeModal"]'.</msg>
 <arg>//span[@data-cy="closeModal"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.637346" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:23.177691" elapsed="0.163430"/>
 </kw>
-<status status="PASS" start="2024-08-17T08:55:47.637346" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:09.797765" elapsed="13.543356"/>
 </kw>
-<kw name="Search Buses">
+<test id="s1-t1" name="TC-001 Verify if a user is able to filter bus according to their seat preference" line="18">
+<kw name="Search Buses" type="SETUP">
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:23.351253" level="INFO">Clicking element '//nav//li[@class="menu_Buses"]'.</msg>
 <arg>//nav//li[@class="menu_Buses"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.638851" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:23.350748" elapsed="0.220251"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>fromCity</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.638851" elapsed="0.001008"/>
+<status status="PASS" start="2024-08-20T00:06:23.570999" elapsed="0.274398"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:23.845397" level="INFO">Clicking element 'fromCity'.</msg>
 <arg>fromCity</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.639859" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:23.845397" elapsed="0.128134"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//input[@placeholder="From"]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.639859" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:23.973531" elapsed="3.070942"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:27.044473" level="INFO">Typing text 'Coimbatore' into text field '//input[@placeholder="From"]'.</msg>
 <arg>//input[@placeholder="From"]</arg>
 <arg>${fromCity}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.639859" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:27.044473" elapsed="0.179228"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${fromCity},')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.639859" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:27.223701" elapsed="0.478340"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:27.702041" level="INFO">Clicking element '//div[contains(@class, 'autosuggest')]//span[contains(text(),'Coimbatore,')]'.</msg>
 <arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${fromCity},')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.639859" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:27.702041" elapsed="0.120383"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>toCity</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.639859" elapsed="0.001098"/>
+<status status="PASS" start="2024-08-20T00:06:27.822424" elapsed="0.031830"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:27.854254" level="INFO">Clicking element 'toCity'.</msg>
+<msg time="2024-08-20T00:06:29.261476" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:06:29.261476" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="toCity" data-cy="toCityVal" type="text" class="bussw_inputField font30 latoBlack" readonly="" value="Kanpur, Uttar Pradesh"&gt; is not clickable at point (903, 296). Other element would receive the click: &lt;input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" title="To" value=""&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</msg>
 <arg>toCity</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.640957" elapsed="0.000000"/>
+<status status="FAIL" start="2024-08-20T00:06:27.854254" elapsed="1.422241">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="toCity" data-cy="toCityVal" type="text" class="bussw_inputField font30 latoBlack" readonly="" value="Kanpur, Uttar Pradesh"&gt; is not clickable at point (903, 296). Other element would receive the click: &lt;input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" title="To" value=""&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</status>
 </kw>
 <arg>Click Element</arg>
 <arg>toCity</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.640957" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:27.854254" elapsed="1.422241"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//input[@placeholder="To"]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.640957" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:29.276495" elapsed="0.046959"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:29.323454" level="INFO">Typing text 'Trivandrum' into text field '//input[@placeholder="To"]'.</msg>
 <arg>//input[@placeholder="To"]</arg>
 <arg>${toCity}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.640957" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:29.323454" elapsed="0.191044"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${toCity},') or contains(text(),'(${toCity}),')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.640957" elapsed="0.000988"/>
+<status status="PASS" start="2024-08-20T00:06:29.514498" elapsed="0.458501"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:29.972999" level="INFO">Clicking element '//div[contains(@class, 'autosuggest')]//span[contains(text(),'Trivandrum,') or contains(text(),'(Trivandrum),')]'.</msg>
 <arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${toCity},') or contains(text(),'(${toCity}),')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.641945" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:29.972999" elapsed="0.094731"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:30.067730" level="INFO">Clicking element 'travelDate'.</msg>
+<msg time="2024-08-20T00:06:31.422591" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:06:31.422591" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="travelDate" type="text" data-cy="travelDateVal" class="bussw_inputField font20" readonly="" value=""&gt; is not clickable at point (1240, 292). Other element would receive the click: &lt;div class="dayPickerHeader dayToFromCont blackText"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</msg>
 <arg>travelDate</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.641945" elapsed="0.000000"/>
+<status status="FAIL" start="2024-08-20T00:06:30.067730" elapsed="1.358979">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="travelDate" type="text" data-cy="travelDateVal" class="bussw_inputField font20" readonly="" value=""&gt; is not clickable at point (1240, 292). Other element would receive the click: &lt;div class="dayPickerHeader dayToFromCont blackText"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</status>
 </kw>
 <arg>Click Element</arg>
 <arg>travelDate</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.641945" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:30.067730" elapsed="1.358979"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[@aria-selected="true"]</arg>
+<arg>//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='19']</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.641945" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:31.426709" elapsed="0.032942"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[@aria-selected="true"]</arg>
+<msg time="2024-08-20T00:06:31.459651" level="INFO">Clicking element '//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='21']'.</msg>
+<arg>//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='21']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.641945" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:31.459651" elapsed="0.097085"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:31.556736" level="INFO">Clicking element 'search_button'.</msg>
 <arg>search_button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.641945" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:31.556736" elapsed="7.215666"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class="busListingContainer"]//p[contains(text(),'found')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:06:38.772402" elapsed="0.031095"/>
 </kw>
 <arg>${from}</arg>
 <arg>${to}</arg>
-<status status="PASS" start="2024-08-17T08:55:47.638851" elapsed="0.003094"/>
+<status status="PASS" start="2024-08-20T00:06:23.348473" elapsed="15.456024"/>
+</kw>
+<kw name="Select Filter">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:38.806499" level="INFO">Clicking element 'toggle_buses'.</msg>
+<arg>toggle_buses</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:38.805497" elapsed="0.205641"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:39.061969" level="INFO">${initialCount} = 16</msg>
+<var>${initialCount}</var>
+<arg>//div[@class="busCardContainer "]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:39.012214" elapsed="0.049755"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:39.062977" level="INFO">Clicking element '//div[contains(text(),'Drop point')]/../..//span[text()='Pattam']'.</msg>
+<arg>//div[contains(text(),'${filterType}')]/../..//span[text()='${filterExactText}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:39.061969" elapsed="0.146342"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>//div[@class="busListingContainer"]//p[contains(text(),'found') and contains(text(),'${initialCount}')]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-08-20T00:06:39.209324" elapsed="0.324573"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>10s</arg>
+<msg time="2024-08-20T00:06:45.535137" level="INFO">Slept 6 seconds.</msg>
+<arg>6s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-08-17T08:55:47.642862" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-20T00:06:39.534897" elapsed="6.000240"/>
 </kw>
-<status status="PASS" start="2024-08-17T08:55:47.636306" elapsed="0.007552"/>
+<arg>Drop point</arg>
+<arg>Pattam</arg>
+<status status="PASS" start="2024-08-20T00:06:38.805497" elapsed="6.729640"/>
+</kw>
+<kw name="Verify Filter">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:45.537433" level="INFO">Clicking element '//div[@id="toggle_buses" and not(contains(@class,'active'))]'.</msg>
+<msg time="2024-08-20T00:06:45.680600" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:06:45.681902" level="FAIL">Element with locator '//div[@id="toggle_buses" and not(contains(@class,'active'))]' not found.</msg>
+<arg>//div[@id="toggle_buses" and not(contains(@class,'active'))]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-20T00:06:45.537433" elapsed="0.147493">Element with locator '//div[@id="toggle_buses" and not(contains(@class,'active'))]' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>//div[@id="toggle_buses" and not(contains(@class,'active'))]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-20T00:06:45.536141" elapsed="0.148785"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class="busCardContainer "]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:06:45.684926" elapsed="0.024518"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:45.723099" level="INFO">${numberOfBuscard} = 10</msg>
+<var>${numberOfBuscard}</var>
+<arg>//div[@class="busCardContainer "]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:45.710477" elapsed="0.012622"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-20T00:06:45.724099" level="INFO">${numberOfBuses} = 11</msg>
+<var>${numberOfBuses}</var>
+<arg>$numberOfBuscard+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-20T00:06:45.723099" elapsed="0.001000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:06:45.725098" elapsed="0.288714"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:46.014823" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[1]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:46.014823" elapsed="0.106567"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:06:48.122512" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:06:46.121390" elapsed="2.001122"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:48.163774" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:06:48.123032" elapsed="0.040742"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:48.164815" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[1]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:48.163774" elapsed="0.081711"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-08-20T00:06:45.725098" elapsed="2.520387"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:06:48.246992" elapsed="0.292463"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:48.540459" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[2]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:48.539455" elapsed="0.116116"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:06:50.657041" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:06:48.656618" elapsed="2.000423"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:50.689344" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:06:50.657041" elapsed="0.032303"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:50.690377" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[2]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:50.690377" elapsed="0.084910"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-08-20T00:06:48.245485" elapsed="2.529802"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:06:50.775287" elapsed="0.300223"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:51.076507" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[3]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:51.075510" elapsed="0.086958"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:06:53.163988" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:06:51.162468" elapsed="2.001520"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:53.194924" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:06:53.164498" elapsed="0.030426"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:53.195918" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[3]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:53.194924" elapsed="0.091612"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-08-20T00:06:50.775287" elapsed="2.511249"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:06:53.287536" elapsed="0.300161"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:53.588723" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[4]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:53.588723" elapsed="0.080329"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:06:55.670374" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:06:53.669052" elapsed="2.001322"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:55.715733" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:06:55.670374" elapsed="0.045359"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:55.715733" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[4]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:55.715733" elapsed="0.125218"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-08-20T00:06:53.287536" elapsed="2.553415"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:06:55.840951" elapsed="0.303674"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:56.144625" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[5]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:56.144625" elapsed="0.131000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:06:58.276265" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:06:56.275625" elapsed="2.000640"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:58.320867" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:06:58.276265" elapsed="0.044602"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:58.320867" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[5]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:58.320867" elapsed="0.132876"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2024-08-20T00:06:55.840951" elapsed="2.612792"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:06:58.453743" elapsed="0.306652"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:06:58.760395" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[6]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:06:58.760395" elapsed="0.144466"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:00.908775" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:06:58.908360" elapsed="2.000415"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:00.959266" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:00.908775" elapsed="0.050491"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:00.959266" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[6]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:00.959266" elapsed="0.124651"/>
+</kw>
+<var name="${index}">6</var>
+<status status="PASS" start="2024-08-20T00:06:58.453743" elapsed="2.630174"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:01.083917" elapsed="0.313558"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:01.397475" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[7]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:01.397475" elapsed="0.150930"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:03.548602" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:01.548405" elapsed="2.000197"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:03.586536" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:03.548602" elapsed="0.037934"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:03.586536" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[7]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:03.586536" elapsed="0.107049"/>
+</kw>
+<var name="${index}">7</var>
+<status status="PASS" start="2024-08-20T00:07:01.083917" elapsed="2.609668"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:03.694215" elapsed="0.299480"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:03.993695" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[8]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:03.993695" elapsed="0.151826"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:06.146481" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:04.145521" elapsed="2.000960"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:06.182862" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:06.146481" elapsed="0.036381"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:06.182862" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[8]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:06.182862" elapsed="0.084396"/>
+</kw>
+<var name="${index}">8</var>
+<status status="PASS" start="2024-08-20T00:07:03.693585" elapsed="2.573673"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:06.267258" elapsed="0.313243"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:06.580501" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[9]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:06.580501" elapsed="0.106414"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:08.687493" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:06.686915" elapsed="2.000578"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:08.736579" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:08.687493" elapsed="0.049086"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:08.736579" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[9]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:08.736579" elapsed="0.123501"/>
+</kw>
+<var name="${index}">9</var>
+<status status="PASS" start="2024-08-20T00:07:06.267258" elapsed="2.592822"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:08.860080" elapsed="0.316352"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:09.176432" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[10]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:09.176432" elapsed="0.115372"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:11.292158" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:09.291804" elapsed="2.000354"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:11.336945" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Pattam"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:11.292158" elapsed="0.044787"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:11.336945" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[10]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:11.336945" elapsed="0.117538"/>
+</kw>
+<var name="${index}">10</var>
+<status status="PASS" start="2024-08-20T00:07:08.860080" elapsed="2.596835"/>
+</iter>
+<var>${index}</var>
+<value>1</value>
+<value>${numberOfBuses}</value>
+<status status="PASS" start="2024-08-20T00:06:45.724099" elapsed="25.732816"/>
+</for>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:14.458142" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:11.457652" elapsed="3.000490"/>
+</kw>
+<arg>Pattam</arg>
+<status status="PASS" start="2024-08-20T00:06:45.536141" elapsed="28.922001"/>
+</kw>
+<kw name="Clear Filter" type="TEARDOWN">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:14.458142" level="INFO">Clicking element '//div[@class="filterContainer"]//p[ text()="CLEAR ALL" and notcontains(@class,"disabledGrey")]'.</msg>
+<msg time="2024-08-20T00:07:14.666190" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:07:14.666190" level="FAIL">InvalidSelectorException: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"filterContainer\"]//p[ text()=\"CLEAR ALL\" and notcontains(@class,\"disabledGrey\")] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"filterContainer\"]//p[ text()=\"CLEAR ALL\" and notcontains(@class,\"disabledGrey\")]' is not a valid XPath expression."}
+  (Session info: chrome=127.0.6533.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D93DA57]
+	(No symbol) [0x00007FF68D93FD31]
+	(No symbol) [0x00007FF68D93FDD0]
+	(No symbol) [0x00007FF68D987F69]
+	(No symbol) [0x00007FF68D98850C]
+	(No symbol) [0x00007FF68D9CDCE7]
+	(No symbol) [0x00007FF68D9ACAAF]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</msg>
+<arg>//div[@class="filterContainer"]//p[ text()="CLEAR ALL" and notcontains(@class,"disabledGrey")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-20T00:07:14.458142" elapsed="0.208048">InvalidSelectorException: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"filterContainer\"]//p[ text()=\"CLEAR ALL\" and notcontains(@class,\"disabledGrey\")] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"filterContainer\"]//p[ text()=\"CLEAR ALL\" and notcontains(@class,\"disabledGrey\")]' is not a valid XPath expression."}
+  (Session info: chrome=127.0.6533.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D93DA57]
+	(No symbol) [0x00007FF68D93FD31]
+	(No symbol) [0x00007FF68D93FDD0]
+	(No symbol) [0x00007FF68D987F69]
+	(No symbol) [0x00007FF68D98850C]
+	(No symbol) [0x00007FF68D9CDCE7]
+	(No symbol) [0x00007FF68D9ACAAF]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</status>
+</kw>
+<arg>Click Element</arg>
+<arg>//div[@class="filterContainer"]//p[ text()="CLEAR ALL" and notcontains(@class,"disabledGrey")]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-20T00:07:14.458142" elapsed="0.208048"/>
+</kw>
+<status status="PASS" start="2024-08-20T00:07:14.458142" elapsed="0.208048"/>
+</kw>
+<status status="PASS" start="2024-08-20T00:06:23.341121" elapsed="51.325069"/>
 </test>
-<status status="PASS" start="2024-08-17T08:55:47.305352" elapsed="0.340513"/>
+<test id="s1-t2" name="TC-002 Verify if a user is able to filter bus according to their seat preference" line="23">
+<kw name="Search Buses" type="SETUP">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:14.675770" level="INFO">Clicking element '//nav//li[@class="menu_Buses"]'.</msg>
+<arg>//nav//li[@class="menu_Buses"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:14.675770" elapsed="2.121109"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>fromCity</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:16.796879" elapsed="0.066442"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:16.863321" level="INFO">Clicking element 'fromCity'.</msg>
+<arg>fromCity</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:16.863321" elapsed="0.355010"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@placeholder="From"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:17.220502" elapsed="0.485226"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:17.705728" level="INFO">Typing text 'Coimbatore' into text field '//input[@placeholder="From"]'.</msg>
+<arg>//input[@placeholder="From"]</arg>
+<arg>${fromCity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:17.705728" elapsed="0.197325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${fromCity},')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:17.903053" elapsed="0.021707"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:17.924760" level="INFO">Clicking element '//div[contains(@class, 'autosuggest')]//span[contains(text(),'Coimbatore,')]'.</msg>
+<arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${fromCity},')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:17.924760" elapsed="0.108228"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>toCity</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:18.039982" elapsed="0.028310"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:18.074846" level="INFO">Clicking element 'toCity'.</msg>
+<msg time="2024-08-20T00:07:19.503004" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:07:19.503004" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="toCity" data-cy="toCityVal" type="text" class="bussw_inputField font30 latoBlack" readonly="" value="Thiruvananthapuram (Trivandrum), Kerala"&gt; is not clickable at point (903, 296). Other element would receive the click: &lt;input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" title="To" value=""&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</msg>
+<arg>toCity</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-20T00:07:18.068292" elapsed="1.450412">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="toCity" data-cy="toCityVal" type="text" class="bussw_inputField font30 latoBlack" readonly="" value="Thiruvananthapuram (Trivandrum), Kerala"&gt; is not clickable at point (903, 296). Other element would receive the click: &lt;input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" title="To" value=""&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</status>
+</kw>
+<arg>Click Element</arg>
+<arg>toCity</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-20T00:07:18.068292" elapsed="1.450412"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@placeholder="To"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:19.518704" elapsed="0.046915"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:19.565619" level="INFO">Typing text 'Trivandrum' into text field '//input[@placeholder="To"]'.</msg>
+<arg>//input[@placeholder="To"]</arg>
+<arg>${toCity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:19.565619" elapsed="0.217696"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${toCity},') or contains(text(),'(${toCity}),')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:19.783315" elapsed="0.021564"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:19.804879" level="INFO">Clicking element '//div[contains(@class, 'autosuggest')]//span[contains(text(),'Trivandrum,') or contains(text(),'(Trivandrum),')]'.</msg>
+<arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${toCity},') or contains(text(),'(${toCity}),')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:19.804879" elapsed="0.114753"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:19.922146" level="INFO">Clicking element 'travelDate'.</msg>
+<msg time="2024-08-20T00:07:21.320630" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:07:21.320630" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="travelDate" type="text" data-cy="travelDateVal" class="bussw_inputField font20" readonly="" value=""&gt; is not clickable at point (1240, 292). Other element would receive the click: &lt;div class="dayPickerHeader dayToFromCont blackText"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</msg>
+<arg>travelDate</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-20T00:07:19.919632" elapsed="1.400998">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="travelDate" type="text" data-cy="travelDateVal" class="bussw_inputField font20" readonly="" value=""&gt; is not clickable at point (1240, 292). Other element would receive the click: &lt;div class="dayPickerHeader dayToFromCont blackText"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</status>
+</kw>
+<arg>Click Element</arg>
+<arg>travelDate</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-20T00:07:19.919632" elapsed="1.400998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='19']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:21.320630" elapsed="0.041242"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:21.361872" level="INFO">Clicking element '//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='21']'.</msg>
+<arg>//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='21']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:21.361872" elapsed="0.089544"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:21.456861" level="INFO">Clicking element 'search_button'.</msg>
+<arg>search_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:21.451416" elapsed="2.393755"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class="busListingContainer"]//p[contains(text(),'found')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:23.845171" elapsed="0.039677"/>
+</kw>
+<arg>${from}</arg>
+<arg>${to}</arg>
+<status status="PASS" start="2024-08-20T00:07:14.675770" elapsed="9.209078"/>
+</kw>
+<kw name="Search Buses">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:23.884848" level="INFO">Clicking element '//nav//li[@class="menu_Buses"]'.</msg>
+<arg>//nav//li[@class="menu_Buses"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:23.884848" elapsed="2.854199"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>fromCity</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:26.741449" elapsed="0.088380"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:26.833445" level="INFO">Clicking element 'fromCity'.</msg>
+<arg>fromCity</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:26.830586" elapsed="0.237246"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@placeholder="From"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:27.067832" elapsed="0.279199"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:27.348295" level="INFO">Typing text 'Coimbatore' into text field '//input[@placeholder="From"]'.</msg>
+<arg>//input[@placeholder="From"]</arg>
+<arg>${fromCity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:27.348295" elapsed="0.240534"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${fromCity},')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:27.588829" elapsed="0.034779"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:27.623608" level="INFO">Clicking element '//div[contains(@class, 'autosuggest')]//span[contains(text(),'Coimbatore,')]'.</msg>
+<arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${fromCity},')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:27.623608" elapsed="0.141580"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>toCity</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:27.765188" elapsed="0.040662"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:27.805850" level="INFO">Clicking element 'toCity'.</msg>
+<msg time="2024-08-20T00:07:29.257028" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:07:29.257028" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="toCity" data-cy="toCityVal" type="text" class="bussw_inputField font30 latoBlack" readonly="" value="Thiruvananthapuram (Trivandrum), Kerala"&gt; is not clickable at point (903, 296). Other element would receive the click: &lt;input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" title="To" value=""&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</msg>
+<arg>toCity</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-20T00:07:27.805850" elapsed="1.451178">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="toCity" data-cy="toCityVal" type="text" class="bussw_inputField font30 latoBlack" readonly="" value="Thiruvananthapuram (Trivandrum), Kerala"&gt; is not clickable at point (903, 296). Other element would receive the click: &lt;input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" title="To" value=""&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</status>
+</kw>
+<arg>Click Element</arg>
+<arg>toCity</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-20T00:07:27.805850" elapsed="1.466820"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@placeholder="To"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:29.272670" elapsed="0.030862"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:29.303532" level="INFO">Typing text 'Trivandrum' into text field '//input[@placeholder="To"]'.</msg>
+<arg>//input[@placeholder="To"]</arg>
+<arg>${toCity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:29.303532" elapsed="0.141848"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${toCity},') or contains(text(),'(${toCity}),')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:29.445380" elapsed="0.025277"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:29.470657" level="INFO">Clicking element '//div[contains(@class, 'autosuggest')]//span[contains(text(),'Trivandrum,') or contains(text(),'(Trivandrum),')]'.</msg>
+<arg>//div[contains(@class, 'autosuggest')]//span[contains(text(),'${toCity},') or contains(text(),'(${toCity}),')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:29.470657" elapsed="0.089879"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:29.561432" level="INFO">Clicking element 'travelDate'.</msg>
+<msg time="2024-08-20T00:07:30.957812" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:07:30.957812" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="travelDate" type="text" data-cy="travelDateVal" class="bussw_inputField font20" readonly="" value=""&gt; is not clickable at point (1240, 292). Other element would receive the click: &lt;div class="dayPickerHeader dayToFromCont blackText"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</msg>
+<arg>travelDate</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-20T00:07:29.561432" elapsed="1.396380">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input id="travelDate" type="text" data-cy="travelDateVal" class="bussw_inputField font20" readonly="" value=""&gt; is not clickable at point (1240, 292). Other element would receive the click: &lt;div class="dayPickerHeader dayToFromCont blackText"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D98FEEE]
+	(No symbol) [0x00007FF68D98D962]
+	(No symbol) [0x00007FF68D98AE7B]
+	(No symbol) [0x00007FF68D98A095]
+	(No symbol) [0x00007FF68D97C271]
+	(No symbol) [0x00007FF68D9ACA6A]
+	(No symbol) [0x00007FF68D97BBB6]
+	(No symbol) [0x00007FF68D9ACC80]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</status>
+</kw>
+<arg>Click Element</arg>
+<arg>travelDate</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-20T00:07:29.561432" elapsed="1.396380"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='19']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:30.957812" elapsed="0.040761"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:30.998573" level="INFO">Clicking element '//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='21']'.</msg>
+<arg>//div[contains(text(), 'August')]/ancestor::div[@class="DayPicker-Month"]//div[text()='21']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:30.998573" elapsed="0.083289"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:31.082920" level="INFO">Clicking element 'search_button'.</msg>
+<arg>search_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:31.081862" elapsed="1.697065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class="busListingContainer"]//p[contains(text(),'found')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:32.783317" elapsed="0.043609"/>
+</kw>
+<arg>${from}</arg>
+<arg>${to}</arg>
+<status status="PASS" start="2024-08-20T00:07:23.884848" elapsed="8.942078"/>
+</kw>
+<kw name="Select Filter">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:32.826926" level="INFO">Clicking element 'toggle_buses'.</msg>
+<arg>toggle_buses</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:32.826926" elapsed="0.341047"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:33.187631" level="INFO">${initialCount} = 16</msg>
+<var>${initialCount}</var>
+<arg>//div[@class="busCardContainer "]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:33.167973" elapsed="0.019658"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:33.203774" level="INFO">Clicking element '//div[contains(text(),'Drop point')]/../..//span[text()='Ulloor']'.</msg>
+<arg>//div[contains(text(),'${filterType}')]/../..//span[text()='${filterExactText}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:33.203774" elapsed="0.124217"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>//div[@class="busListingContainer"]//p[contains(text(),'found') and contains(text(),'${initialCount}')]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:33.329934" elapsed="0.282693"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:39.612911" level="INFO">Slept 6 seconds.</msg>
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:33.612627" elapsed="6.000284"/>
+</kw>
+<arg>Drop point</arg>
+<arg>Ulloor</arg>
+<status status="PASS" start="2024-08-20T00:07:32.826926" elapsed="6.785985"/>
+</kw>
+<kw name="Verify Filter">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:39.612911" level="INFO">Clicking element '//div[@id="toggle_buses" and not(contains(@class,'active'))]'.</msg>
+<msg time="2024-08-20T00:07:39.764747" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:07:39.780391" level="FAIL">Element with locator '//div[@id="toggle_buses" and not(contains(@class,'active'))]' not found.</msg>
+<arg>//div[@id="toggle_buses" and not(contains(@class,'active'))]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-20T00:07:39.612911" elapsed="0.167480">Element with locator '//div[@id="toggle_buses" and not(contains(@class,'active'))]' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>//div[@id="toggle_buses" and not(contains(@class,'active'))]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-20T00:07:39.612911" elapsed="0.167480"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class="busCardContainer "]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:39.780391" elapsed="0.016625"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:39.815475" level="INFO">${numberOfBuscard} = 9</msg>
+<var>${numberOfBuscard}</var>
+<arg>//div[@class="busCardContainer "]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:39.797016" elapsed="0.018459"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-20T00:07:39.815475" level="INFO">${numberOfBuses} = 10</msg>
+<var>${numberOfBuses}</var>
+<arg>$numberOfBuscard+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-20T00:07:39.815475" elapsed="0.000000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:39.815475" elapsed="0.306600"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:40.122075" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[1]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:40.122075" elapsed="0.112106"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:42.235596" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:40.234181" elapsed="2.001415"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:42.291334" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:42.235596" elapsed="0.055738"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:42.291334" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[1]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:42.291334" elapsed="0.124712"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-08-20T00:07:39.815475" elapsed="2.600571"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:42.416046" elapsed="0.309834"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:42.725880" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[2]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:42.725880" elapsed="0.156147"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:44.884866" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:42.883557" elapsed="2.001309"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:44.933326" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:44.884866" elapsed="0.048460"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:44.933326" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[2]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:44.933326" elapsed="0.096003"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-08-20T00:07:42.416046" elapsed="2.613283"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:45.029329" elapsed="0.303826"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:45.333155" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[3]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:45.333155" elapsed="0.147766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:47.481738" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:45.480921" elapsed="2.000817"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:47.527061" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:47.481738" elapsed="0.045323"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:47.527061" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[3]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:47.527061" elapsed="0.138115"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-08-20T00:07:45.029329" elapsed="2.635847"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:47.665176" elapsed="0.301511"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:47.966687" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[4]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:47.966687" elapsed="0.135361"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:50.104241" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:48.103126" elapsed="2.001115"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:50.148739" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:50.104241" elapsed="0.044498"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:50.148739" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[4]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:50.148739" elapsed="0.124437"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-08-20T00:07:47.665176" elapsed="2.608000"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:50.276039" elapsed="0.299775"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:50.575814" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[5]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:50.575814" elapsed="0.130774"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:52.707186" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:50.706588" elapsed="2.000598"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:52.756753" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:52.707186" elapsed="0.049567"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:52.756753" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[5]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:52.756753" elapsed="0.151475"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2024-08-20T00:07:50.275296" elapsed="2.632932"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:52.908228" elapsed="0.311913"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:53.220141" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[6]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:53.220141" elapsed="0.141116"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:55.362273" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:53.361847" elapsed="2.000426"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:55.407949" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:55.362273" elapsed="0.045676"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:55.407949" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[6]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:55.407949" elapsed="0.147073"/>
+</kw>
+<var name="${index}">6</var>
+<status status="PASS" start="2024-08-20T00:07:52.908228" elapsed="2.646794"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:55.555022" elapsed="0.312585"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:55.867607" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[7]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:55.867607" elapsed="0.137379"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:07:58.006505" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:56.005719" elapsed="2.000786"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:58.053610" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:07:58.006505" elapsed="0.047105"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:58.056166" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[7]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:58.053610" elapsed="0.118537"/>
+</kw>
+<var name="${index}">7</var>
+<status status="PASS" start="2024-08-20T00:07:55.555022" elapsed="2.617125"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:07:58.172147" elapsed="0.305013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:07:58.477160" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[8]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:07:58.477160" elapsed="0.140419"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:08:00.618211" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:07:58.617579" elapsed="2.000632"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:08:00.656905" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:08:00.618211" elapsed="0.038694"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:08:00.656905" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[8]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:08:00.656905" elapsed="0.114054"/>
+</kw>
+<var name="${index}">8</var>
+<status status="PASS" start="2024-08-20T00:07:58.172147" elapsed="2.598812"/>
+</iter>
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-20T00:08:00.770959" elapsed="0.314976"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:08:01.085935" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[9]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:08:01.085935" elapsed="0.088174"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:08:03.174915" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:08:01.174109" elapsed="2.000806"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:08:03.216770" level="INFO">Element '//ul[@class="btnSelectBusWithoutRadio"]//span[@title="Ulloor"]' is displayed.</msg>
+<arg>//ul[@class="btnSelectBusWithoutRadio"]//span[@title="${filtertext}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-20T00:08:03.174915" elapsed="0.041855"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:08:03.216770" level="INFO">Clicking element '(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[9]'.</msg>
+<arg>(//div[contains(@class,"busCardFooter")]//span[text()="Pickups &amp; Drops"])[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-20T00:08:03.216770" elapsed="0.157479"/>
+</kw>
+<var name="${index}">9</var>
+<status status="PASS" start="2024-08-20T00:08:00.770959" elapsed="2.603290"/>
+</iter>
+<var>${index}</var>
+<value>1</value>
+<value>${numberOfBuses}</value>
+<status status="PASS" start="2024-08-20T00:07:39.815475" elapsed="23.558774"/>
+</for>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-20T00:08:06.374537" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-20T00:08:03.374249" elapsed="3.000288"/>
+</kw>
+<arg>Ulloor</arg>
+<status status="PASS" start="2024-08-20T00:07:39.612911" elapsed="26.761626"/>
+</kw>
+<kw name="Clear Filter" type="TEARDOWN">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-20T00:08:06.374537" level="INFO">Clicking element '//div[@class="filterContainer"]//p[ text()="CLEAR ALL" and notcontains(@class,"disabledGrey")]'.</msg>
+<msg time="2024-08-20T00:08:06.604717" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-51.png"&gt;&lt;img src="selenium-screenshot-51.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-20T00:08:06.604717" level="FAIL">InvalidSelectorException: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"filterContainer\"]//p[ text()=\"CLEAR ALL\" and notcontains(@class,\"disabledGrey\")] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"filterContainer\"]//p[ text()=\"CLEAR ALL\" and notcontains(@class,\"disabledGrey\")]' is not a valid XPath expression."}
+  (Session info: chrome=127.0.6533.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D93DA57]
+	(No symbol) [0x00007FF68D93FD31]
+	(No symbol) [0x00007FF68D93FDD0]
+	(No symbol) [0x00007FF68D987F69]
+	(No symbol) [0x00007FF68D98850C]
+	(No symbol) [0x00007FF68D9CDCE7]
+	(No symbol) [0x00007FF68D9ACAAF]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</msg>
+<arg>//div[@class="filterContainer"]//p[ text()="CLEAR ALL" and notcontains(@class,"disabledGrey")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-20T00:08:06.374537" elapsed="0.230180">InvalidSelectorException: Message: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class=\"filterContainer\"]//p[ text()=\"CLEAR ALL\" and notcontains(@class,\"disabledGrey\")] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class=\"filterContainer\"]//p[ text()=\"CLEAR ALL\" and notcontains(@class,\"disabledGrey\")]' is not a valid XPath expression."}
+  (Session info: chrome=127.0.6533.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF68DA89642+30946]
+	(No symbol) [0x00007FF68DA3E3D9]
+	(No symbol) [0x00007FF68D936FDA]
+	(No symbol) [0x00007FF68D93DA57]
+	(No symbol) [0x00007FF68D93FD31]
+	(No symbol) [0x00007FF68D93FDD0]
+	(No symbol) [0x00007FF68D987F69]
+	(No symbol) [0x00007FF68D98850C]
+	(No symbol) [0x00007FF68D9CDCE7]
+	(No symbol) [0x00007FF68D9ACAAF]
+	(No symbol) [0x00007FF68D9CB041]
+	(No symbol) [0x00007FF68D9AC813]
+	(No symbol) [0x00007FF68D97A6E5]
+	(No symbol) [0x00007FF68D97B021]
+	GetHandleVerifier [0x00007FF68DBBF84D+1301229]
+	GetHandleVerifier [0x00007FF68DBCBDC7+1351783]
+	GetHandleVerifier [0x00007FF68DBC2A13+1313971]
+	GetHandleVerifier [0x00007FF68DABDD16+245686]
+	(No symbol) [0x00007FF68DA4759F]
+	(No symbol) [0x00007FF68DA43814]
+	(No symbol) [0x00007FF68DA439A2]
+	(No symbol) [0x00007FF68DA3A3FF]
+	BaseThreadInitThunk [0x00007FFB288F257D+29]
+	RtlUserThreadStart [0x00007FFB298AAF28+40]
+</status>
+</kw>
+<arg>Click Element</arg>
+<arg>//div[@class="filterContainer"]//p[ text()="CLEAR ALL" and notcontains(@class,"disabledGrey")]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-20T00:08:06.374537" elapsed="0.230180"/>
+</kw>
+<status status="PASS" start="2024-08-20T00:08:06.374537" elapsed="0.230180"/>
+</kw>
+<status status="PASS" start="2024-08-20T00:07:14.672709" elapsed="51.932008"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-20T00:08:06.604717" elapsed="2.599129"/>
+</kw>
+<status status="PASS" start="2024-08-20T00:06:09.459835" elapsed="119.744011"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Training2">Training2</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Training2">Training2</stat>
 </suite>
 </statistics>
 <errors>
